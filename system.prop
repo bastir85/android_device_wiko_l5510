@@ -1,6 +1,8 @@
 #
-# system.prop for msm8916
+# system.prop for l5320 and l5510
 #
+ro.secure=0
+ro.debuggable=1
 
 #rild.libpath=/system/lib/libreference-ril.so
 rild.libpath=/system/vendor/lib/libril-qc-qmi-1.so
@@ -16,18 +18,23 @@ persist.rild.nitz_short_ons_2=
 persist.rild.nitz_short_ons_3=
 ril.subscription.types=NV,RUIM
 DEVICE_PROVISIONED=1
+# Start in GSM/WCDMA/LTE mode # LINE<modify default network><2014.10.25><mickal.ma>
 ro.telephony.default_network=9
+# Start in GSM/WCDMA/LTE mode # LINE<modify default logkit><2014.12.05><suda>
 persist.sys.logkit.ctrlcode=0
 debug.sf.hw=1
 debug.egl.hw=1
 debug.composition.type=c2d
 persist.hwc.mdpcomp.enable=true
 debug.mdpcomp.logs=0
+#<Line><FFBAKK-1388><20141229>set idletime of change time GPU;xiongdajun
 debug.mdpcomp.idletime=550
+#Enable translucent status bar feature
 persist.hwc.ptor.enable=true
 dalvik.vm.heapsize=36m
 dev.pm.dyn_samplingrate=1
 persist.demo.hdmirotationlock=false
+#<Line><FFBAKK-753><20141107>Close gpu to fix bug;xiongdajun
 debug.sf.gpu_comp_tiling=0
 
 #

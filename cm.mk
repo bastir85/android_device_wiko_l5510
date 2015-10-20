@@ -12,10 +12,18 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-$(call inherit-product, device/wiko/l5510/full_l5510.mk)
+# Release name
+PRODUCT_RELEASE_NAME := l5510
 
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
-PRODUCT_NAME := cm_l5510
+# Inherit device configuration
+$(call inherit-product, device/wiko/l5510/device_l5510.mk)
+
+## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := l5510
+PRODUCT_NAME := cm_l5510
+PRODUCT_BRAND := wiko
+PRODUCT_MODEL := l5510
+PRODUCT_MANUFACTURER := wiko
